@@ -8,7 +8,7 @@ function globalErrorHandler(error, req, res, next) {
 
         return res.status(400).json(errors);
     }
-    res.status(500).json({ message: "Something went wrong" });
+    res.status(500).json({ message: "Something went wrong", error });
 }
 
 module.exports = globalErrorHandler
